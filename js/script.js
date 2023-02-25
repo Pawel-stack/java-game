@@ -56,35 +56,19 @@ function playgame(playerInput){
 playgame(); 
 
 
-function rockButtonClicked(){
+document.getElementById('play-rock').addEventListener('click', function(){
   playgame(1);
-}
-
-function paperButtonClicked(){
+  rounds ++;
+});
+document.getElementById('play-paper').addEventListener('click', function(){
   playgame(2); 
-}
+}); 
+document.getElementById('play-scissors').addEventListener('click', function(){
+  playgame(3);
+}); 
 
-function scissorsButtonClicked(){
-  playgame(3);   
-}
-
-const rockButton = document.getElementById('play-rock');
-const paperButton = document.getElementById('play-paper');
-const scissorsButton = document.getElementById('play-scissors');
-
-rockButton.addEventListener('click', rockButtonClicked);
-paperButton.addEventListener('click', paperButtonClicked); 
-scissorsButton.addEventListener('click', scissorsButtonClicked); 
+let roundss = document.getElementById('rounds-meter'); 
+roundss.classList.add('active'); 
 
 
-let roundsmeter = document.getElementById('rounds-meter'); 
 
-function rounds(meter){
-  if(playgame ++){
-    meter ++; 
-  }
-
-  rounds(); 
-
-  roundsmeter.innerHTML=meter; 
-}
