@@ -6,20 +6,23 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="container">
-		<div id="messages"></div>
-	</div>
-    <div id="buttons">
-        <button id="play-rock">Kamien</button>
-        <button id="play-paper">Papier</button>
-        <button id="play-scissors">Nozyce</button>
+    <div class="title">
+        <h3>Papier//Kamień//Nożyce</h3>
     </div>
-    <div id="score">
-        <div id="player">
-            <p>Player :</p>
-            <span id="player-points"></span>
-            <span id="computer-points"></span>
-            <p>: Computer</p>
+    <div class="container">
+        <div class="rules">
+            <p>Podejmij wyzwanie walki z komputerem! Jak myślisz kto będzie lepszy?</p>
+        </div>
+        <div class="rounds">
+            <p>Liczba rund:<span id="rounds-meter"></span></p>
+        </div>
+    </div>
+	<div class="container">
+		<div class="inner-message" id="messages"></div>
+        <div class="but-ons" id="buttons">
+            <button class="inner-button" id="play-rock">Kamien</button>
+            <button class="inner-button" id="play-paper">Papier</button>
+            <button class="inner-button" id="play-scissors">Nozyce</button>
         </div>
     </div>
 	<script src="js/functions.js"></script>

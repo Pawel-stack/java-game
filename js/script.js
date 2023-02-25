@@ -29,19 +29,19 @@ function playgame(playerInput){
   function displayResult(argComputerMove,argPlayerMove){
     if(argComputerMove == 'Kamień' && argPlayerMove == 'Papier'){
       printMessage('Gratulacje wygrywa gracz!'); 
-     
+      
     } else if (argComputerMove == 'Papier' && argPlayerMove == 'Kamień'){
       printMessage('Tym razem przegrywasz!'); 
-     
+      
     } else if (argComputerMove == 'Papier' && argPlayerMove == 'Nożyce'){
       printMessage('Gratulacje wygrywa gracz!'); 
-     
+      
     } else if (argComputerMove == 'Nożyce' && argPlayerMove == 'Papier'){
       printMessage('Tym razem przegrywasz!'); 
       
     } else if (argComputerMove == 'Nożyce' && argPlayerMove == 'Kamień'){
       printMessage('Gratulacje wygrywa gracz!'); 
-      
+    
     } else if (argComputerMove == 'Kamień' && argPlayerMove == 'Nożyce'){
       printMessage('Tym razem przegrywasz!'); 
       
@@ -77,3 +77,14 @@ paperButton.addEventListener('click', paperButtonClicked);
 scissorsButton.addEventListener('click', scissorsButtonClicked); 
 
 
+let roundsmeter = document.getElementById('rounds-meter'); 
+
+function rounds(meter){
+  if(playgame ++){
+    meter ++; 
+  }
+
+  rounds(); 
+
+  roundsmeter.innerHTML=meter; 
+}
