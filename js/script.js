@@ -58,7 +58,6 @@ playgame();
 
 document.getElementById('play-rock').addEventListener('click', function(){
   playgame(1);
-  rounds ++;
 });
 document.getElementById('play-paper').addEventListener('click', function(){
   playgame(2); 
@@ -67,8 +66,10 @@ document.getElementById('play-scissors').addEventListener('click', function(){
   playgame(3);
 }); 
 
-let roundss = document.getElementById('rounds-meter'); 
-roundss.classList.add('active'); 
+
+const getResult = document.getElementById('results-player');
+
+resultPlayer = 0; 
 
 
 
