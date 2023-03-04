@@ -53,6 +53,7 @@ function playgame(playerInput){
   displayResult(computerMove,playerMove);
 
 }
+
 playgame(); 
 
 
@@ -67,9 +68,41 @@ document.getElementById('play-scissors').addEventListener('click', function(){
 }); 
 
 
-const getResult = document.getElementById('results-player');
 
-resultPlayer = 0; 
+
+const playerResult = document.getElementById('results-player');
+const computerResult = document.getElementById('results-computer');
+
+playerResult = 0; 
+
+computerResult = 0;
+
+
+function gameResults(player,computer){
+
+  if(computer == 'Kamień' && player == 'Papier'){
+    playerResult ++; 
+    
+  } else if (computer == 'Papier' && player == 'Kamień'){
+    computerResult ++;  
+    
+  } else if (computer == 'Papier' && player == 'Nożyce'){
+    playerResult ++;  
+    
+  } else if (computer == 'Nożyce' && player == 'Papier'){
+    computerResult ++;
+    
+  } else if (computer == 'Nożyce' && player == 'Kamień'){
+    playerResult ++; 
+  
+  } else if (computer == 'Kamień' && player == 'Nożyce'){
+    computerResult ++; 
+    
+  } 
+}
+
+gameResults();
+
 
 
 
